@@ -23,6 +23,10 @@
             extend: {
               colors: {
                 primary: 'rgb(180, 244, 97)',
+                font_primary: 'rgb(17, 17, 17)',
+                font_secondary: 'rgba(17, 17, 17, 0.7)',
+                font_tertiary: 'rgba(17, 17, 17, 0.4)',
+                body: 'rgb(249, 247, 243)'
               },
               fontFamily: {
                 lexend: 'Lexend'
@@ -33,9 +37,32 @@
     </script>
 </head>
 <body class="font-lexend">
-    <header>
-        Testing....
+
+    <header class="container mx-auto border border-indigo-700 border-solid">
+        <!-- navbar section starts here -->
+        <div class="bg-body py-2.5">
+            <nav class="navbar w-11/12 mx-auto">
+                <div class="navbar-start">
+                    <button class="btn bg-primary px-8 text-xl font-semibold font-lexend text-font_primary">Blog</button>
+                </div>
+                <div class="navbar-center flex gap-4">
+                  <img src="assets/logo.png" alt="">  
+                  <h3 class="text-2xl font-semibold text-font_pimary">Donate Bangladesh</h3>
+                </div>
+                <div class="navbar-end flex gap-2.5">
+                  <img src="assets/coin.png" alt="">
+                  <p class="text-xl font-medium text-font_secondary"><span>5500</span> BDT</p>
+                </div>
+            </nav>    
+        </div>
+
+        <!-- buttons section starts here -->
+        <section class="w-11/12 mx-auto flex justify-center gap-4 mt-14 mb-8">
+            <button class="btn bg-primary px-8 text-xl font-semibold font-lexend text-font_primary">Donation</button>
+            <button class="btn bg-white border-solid border-[#1111114D] text-font_secondary px-8 text-xl font-semibold font-lexend">History</button>
+        </section>
     </header>
+
     <main>
 
     </main>
