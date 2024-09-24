@@ -1,7 +1,7 @@
 const historyTab = document.getElementById("history-btn");
 const donationTab = document.getElementById("donation-btn");
 
-// Toggle the active status of the History" button
+// Toggle the active status of the "History" button
 historyTab.addEventListener('click', function(){
     historyTab.classList.add(
         "bg-primary",
@@ -60,9 +60,10 @@ document.getElementById("noakhali-donate-btn").addEventListener('click', functio
     const currentNoakhaliAmount = getInnerTextById("current-noakhali-amount");
     const accountBalance = getInnerTextById("account-balance");
 
-    if(noakhaliDonateInput <= 0 || isNaN(noakhaliDonateInput) || document.getElementById("noakhali-donation-input").value.trim() === ''){
-        document.getElementById("noakhali-amount-error").classList.remove("hidden");
-        return;
+    if(noakhaliDonateInput <= 0 || isNaN(noakhaliDonateInput) || document.getElementById("noakhali-donation-input").value === ''){
+        return document.getElementById("noakhali-amount-error").classList.remove("hidden");
+    } else{
+        document.getElementById("noakhali-amount-error").classList.add("hidden");
     }
     if(noakhaliDonateInput > accountBalance){
         return alert("You don't have enough balance")
@@ -87,9 +88,10 @@ document.getElementById("feni-donate-btn").addEventListener('click', function(){
     const currentFeniAmount = getInnerTextById("current-feni-amount");
     const accountBalance = getInnerTextById("account-balance");
 
-    if(feniDonateInput <= 0 || isNaN(feniDonateInput) || document.getElementById("feni-donation-input").value.trim() === ''){
-        document.getElementById("feni-amount-error").classList.remove("hidden");
-        return;
+    if(feniDonateInput <= 0 || isNaN(feniDonateInput) || document.getElementById("feni-donation-input").value === ''){
+        return document.getElementById("feni-amount-error").classList.remove("hidden");
+    } else {
+        document.getElementById("feni-amount-error").classList.add("hidden");
     }
     if(feniDonateInput > accountBalance){
         return alert("You don't have enough balance")
@@ -114,10 +116,12 @@ document.getElementById("quota-donate-btn").addEventListener('click', function()
     const currentQuotaAmount = getInnerTextById("current-quota-amount");
     const accountBalance = getInnerTextById("account-balance");
 
-    if(quotaDonateInput <= 0 || isNaN(quotaDonateInput) || document.getElementById("quota-donation-input").value.trim() === ''){
-        document.getElementById("quota-amount-error").classList.remove("hidden");
-        return;
+    if(quotaDonateInput <= 0 || isNaN(quotaDonateInput) || document.getElementById("quota-donation-input").value === ''){
+        return document.getElementById("quota-amount-error").classList.remove("hidden");
+    } else {
+        document.getElementById("quota-amount-error").classList.add("hidden");
     }
+
     if(quotaDonateInput > accountBalance){
         return alert("You don't have enough balance")
     }
